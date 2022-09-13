@@ -66,3 +66,45 @@ class account(AbstractBaseUser):
 def create_auth_token(sender, instance=None, created=False, **kwargs):
     if created:
         Token.objects.create(user=instance)
+
+
+class faculty(models.Model):
+
+    GENDER = [
+        ('Male', 'Male'),
+        ('Female', 'Female'),
+        ('Other', 'Other'),
+        ('Prefer not to say', 'Prefer not to say')
+    ]
+
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    emp_id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=100)
+    designation = models.CharField(max_length=100)
+    school = models.CharField(max_length=20)
+    gender = models.CharField(max_length=20, choices=GENDER)
+    phone = models.IntegerField()
+
+    def __str__(self):
+        return str(self.emp_id)
+
+
+class administrator(models.Model):
+
+    GENDER = [
+        ('Male', 'Male'),
+        ('Female', 'Female'),
+        ('Other', 'Other'),
+        ('Prefer not to say', 'Prefer not to say')
+    ]
+
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    admin_id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=100)
+    gender = models.CharField(max_length=20, choices=GENDER)
+    phone = models.IntegerField()
+
+    def __str__(self):
+        return str(self.emp_id)

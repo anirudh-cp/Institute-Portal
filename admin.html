@@ -42,6 +42,11 @@
       src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
       crossorigin="anonymous"
     ></script>
+    <script src="js/file_parse.js"></script>
+    <script>
+      let token = "cf7f4c4370cf0bfe50417f9a64590192dd3eb8c6";
+      let api = new API();
+    </script>
   </head>
   <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -255,7 +260,7 @@
       <div id="layoutSidenav_content">
         <main>
           <div class="container-fluid px-4">
-            <h1 class="mt-4">Faculty</h1>
+            <h1 class="mt-4">Administrator</h1>
             <!-- <ol class="breadcrumb mb-4">
                               <li class="breadcrumb-item active">Dashboard</li>
                           </ol>
@@ -331,23 +336,10 @@
                       <th>Gender</th>
                       <th>Phone</th>
                       <th>Email</th>
-                      <th>Email</th>
-                      <th>Action</th>
                     </tr>
                   </thead>
-                  <tfoot>
-                    <tr>
-                      <th>Admin Id</th>
-                      <th>Name</th>
-                      <th>Gender</th>
-                      <th>Phone</th>
-                      <th>Email</th>
-                      <th>Email</th>
-                      <th>Action</th>
-                    </tr>
-                  </tfoot>
-                  <tbody>
-                    <tr>
+                  <!-- <tbody> -->
+                  <!-- <tr>
                       <td>101</td>
                       <td>Admin 1</td>
                       <td>M</td>
@@ -826,8 +818,8 @@
                       <td>27</td>
                       <td>2011/01/25</td>
                       <td>$112,000</td>
-                    </tr>
-                  </tbody>
+                    </tr> -->
+                  <!-- </tbody> -->
                 </table>
               </div>
             </div>

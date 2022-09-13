@@ -55,3 +55,9 @@ class facultySerializer(serializers.ModelSerializer):
         model=faculty
         fields='__all__'
 
+
+class preferenceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=preference
+        fields='__all__'
+

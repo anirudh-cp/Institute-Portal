@@ -126,3 +126,9 @@ class course(models.Model):
         return str(self.course_code)
 
 
+class preference(models.Model):
+    
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    emp_id = models.IntegerField(primary_key=True)
+    preferences = models.ManyToManyField(course)

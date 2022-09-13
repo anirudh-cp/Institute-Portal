@@ -108,3 +108,20 @@ class administrator(models.Model):
 
     def __str__(self):
         return str(self.emp_id)
+
+
+class course(models.Model):
+
+    course_code = models.CharField(max_length=10, primary_key=True)
+    course_name = models.CharField(max_length=64)
+
+    lecture_hours = models.IntegerField()
+    tutorial_hours = models.IntegerField()
+    practical_hours = models.IntegerField()
+    j_project_hours = models.IntegerField()
+
+    credits = models.IntegerField()
+
+    def __str__(self):
+        return str(self.course_code)
+

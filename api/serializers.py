@@ -2,7 +2,8 @@ from rest_framework import serializers
 from .models import *
 from django.contrib.auth.models import Group
   
-class accountserializer(serializers.ModelSerializer):
+
+class accountSerializer(serializers.ModelSerializer):
     class Meta:
         model=account
         fields=('email', 'date_joined', 'is_superuser', 'groups')
@@ -35,3 +36,10 @@ class RegistrationUserSerializer(serializers.ModelSerializer):
         user.groups.add(group)
         
         return user
+
+
+class courseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=course
+        fields='__all__'
+
